@@ -5,72 +5,60 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/newbackground"
-    tools:context="com.ragew.code.dicee.MainActivity">
+    tools:context="com.ragew.code.dicee.MainActivity"
+    tools:layout_editor_absoluteY="25dp">
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:orientation="vertical"
+    <Button
+        android:id="@+id/rollButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="44dp"
+        android:background="@color/colorPrimaryDark"
+        android:contentDescription="@string/roll_button"
+        android:text="@string/roll"
+        android:textColor="@android:color/darker_gray"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/vegasIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="false"
+        android:layout_marginTop="23dp"
+        android:contentDescription="@string/lasvegas_logo"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/dicee_logo" />
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/rightDie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:contentDescription="@string/right_die"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vegasIcon"
+        app:srcCompat="@drawable/dice1" />
 
-            <ImageView
-                android:id="@+id/vegasIcon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="false"
-                android:layout_marginTop="23dp"
-                android:contentDescription="@string/lasvegas_logo"
-                app:srcCompat="@drawable/dicee_logo" />
-        </RelativeLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingVertical="50dp">
-
-            <ImageView
-                android:id="@+id/leftDie"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:contentDescription="@string/left_die"
-                app:srcCompat="@drawable/dice2" />
-
-            <ImageView
-                android:id="@+id/rightDie"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:contentDescription="@string/right_die"
-                app:srcCompat="@drawable/dice1" />
-        </LinearLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <Button
-                android:id="@+id/rollButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                android:background="@color/colorPrimaryDark"
-                android:contentDescription="@string/roll_button"
-                android:text="@string/roll"
-                android:textColor="@android:color/darker_gray" />
-        </RelativeLayout>
-    </LinearLayout>
+    <ImageView
+        android:id="@+id/leftDie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:contentDescription="@string/left_die"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vegasIcon"
+        app:srcCompat="@drawable/dice2" />
 
 </android.support.constraint.ConstraintLayout>
